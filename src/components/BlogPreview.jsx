@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const posts = [
-  { title: "Design trends 2026", excerpt: "A quick look at what’s shaping interfaces and digital experiences this year.", date: "April 10, 2026", img: "/assets/images/blog-1.jpg" },
-  { title: "How we build", excerpt: "Our internal process for shipping digital products efficiently and with high quality.", date: "March 22, 2026", img: "/assets/images/blog-2.jpg" },
+  { title: "Design trends 2026", excerpt: "A quick look at what’s shaping interfaces and digital experiences this year.", date: "April 10, 2026", img: "/assets/blog-1.jpg" },
+  { title: "How we build", excerpt: "Our internal process for shipping digital products efficiently and with high quality.", date: "March 22, 2026", img: "/assets/blog-2.jpg" },
 ];
 
 export default function BlogPreview() {
@@ -43,7 +43,8 @@ export default function BlogPreview() {
             transition={{ duration: 0.6, delay: i * 0.2 }}
           >
             <div className="w-full aspect-[16/10] bg-neutral-300 rounded-[2rem] overflow-hidden relative">
-              <div className="absolute inset-0 bg-neutral-800 mix-blend-overlay opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+              <img src={p.img} alt={p.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
             </div>
             <div>
               <div className="text-sm font-medium tracking-widest uppercase text-neutral-400 mb-4">{p.date}</div>

@@ -1,9 +1,27 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 const testimonials = [
-  { id: 1, text: "The team at Floka truly elevated our digital presence. Their attention to detail, profound understanding of modern design, and swift execution was unparalleled. We saw a 40% increase in conversions within the first month.", author: "Sarah Jenkins", role: "CMO, Nuvio" },
-  { id: 2, text: "Working with them felt like an extension of our own team. They didn't just build a website; they crafted an experience that perfectly encapsulates our brand identity. Absolute professionals from start to finish.", author: "Michael Chen", role: "Founder, TechNova" },
-  { id: 3, text: "Creative, bold, and incredibly fast. They took our vague ideas and turned them into a stunning reality. I highly recommend Floka for any serious digital transformation project.", author: "Emma Watson", role: "Director, GreenLeaf" }
+  { 
+    id: 1, 
+    text: "The team at Floka truly elevated our digital presence. Their attention to detail, profound understanding of modern design, and swift execution was unparalleled. We saw a 40% increase in conversions within the first month.", 
+    author: "Sarah Jenkins", 
+    role: "CMO, Nuvio",
+    img: "https://i.pravatar.cc/150?img=47"
+  },
+  { 
+    id: 2, 
+    text: "Working with them felt like an extension of our own team. They didn't just build a website; they crafted an experience that perfectly encapsulates our brand identity. Absolute professionals from start to finish.", 
+    author: "Michael Chen", 
+    role: "Founder, TechNova",
+    img: "https://i.pravatar.cc/150?img=11"
+  },
+  { 
+    id: 3, 
+    text: "Creative, bold, and incredibly fast. They took our vague ideas and turned them into a stunning reality. I highly recommend Floka for any serious digital transformation project.", 
+    author: "Emma Watson", 
+    role: "Director, GreenLeaf",
+    img: "https://i.pravatar.cc/150?img=5"
+  }
 ];
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
@@ -47,9 +65,12 @@ export default function Testimonials() {
               <p className="text-2xl sm:text-3xl lg:text-4xl font-light leading-relaxed tracking-tight mb-12">
                 "{testimonials[index].text}"
               </p>
-              <div className="mt-auto">
-                <p className="font-medium text-lg">{testimonials[index].author}</p>
-                <p className="text-sm text-neutral-500 uppercase tracking-widest mt-1">{testimonials[index].role}</p>
+              <div className="mt-auto flex items-center gap-4">
+                <img src={testimonials[index].img} alt={testimonials[index].author} className="w-14 h-14 rounded-full object-cover border border-white/20" />
+                <div>
+                  <p className="font-medium text-lg">{testimonials[index].author}</p>
+                  <p className="text-sm text-neutral-500 uppercase tracking-widest mt-1">{testimonials[index].role}</p>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
