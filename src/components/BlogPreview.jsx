@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import blog1 from "../assets/blog-1.webp";
+import blog2 from "../assets/blog-2.jpg";
 
 const posts = [
-  { title: "Design trends 2026", excerpt: "A quick look at what’s shaping interfaces and digital experiences this year.", date: "April 10, 2026", img: "/assets/blog-1.jpg" },
-  { title: "How we build", excerpt: "Our internal process for shipping digital products efficiently and with high quality.", date: "March 22, 2026", img: "/assets/blog-2.jpg" },
+  { title: "Design trends 2026", excerpt: "A quick look at what’s shaping interfaces and digital experiences this year.", date: "April 10, 2026", img: blog1 },
+  { title: "How we build", excerpt: "Our internal process for shipping digital products efficiently and with high quality.", date: "March 22, 2026", img: blog2 },
 ];
 
 export default function BlogPreview() {
