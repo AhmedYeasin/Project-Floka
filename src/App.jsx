@@ -1,22 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-import Navbar from './components/Navbar'
+import React from "react";
+import "./components/floka.css";
+import CTA from "./components/Cta";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import About from "./components/About";
+import Portfolio from "./components/Portfolio";
+import Pricing from "./components/Pricing";
+import Team from "./components/Team";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Testimonials from "./components/Testimonial";
+import BlogPreview from "./components/BlogPreview";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Expertise from "./components/Expertise";
+import FunFacts from "./components/FunFacts";
+import HowItWorks from "./components/HowItWorks";
+import Awards from "./components/Awards";
 
+
+export default function App() {
   return (
     <>
-      <section id="center">
-        <Navbar/>
-
-        <p className='text-center text-2xl text-blue-700 font-medium'>Welcome to Project Floka</p>
-      </section>
+      {/* <Navbar /> */}
+      <main>
+        <Header/>
+        <Hero />
+        <About/>
+        <Portfolio />
+        <Services />
+        <Expertise/>
+        <FunFacts/>
+        <Team />
+        <Testimonials />
+        <HowItWorks/>
+        <Pricing />
+        <BlogPreview />
+        <Awards/>
+        <CTA></CTA>
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
-
-export default App
