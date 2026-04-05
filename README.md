@@ -1,16 +1,30 @@
-# React + Vite
+# Project Floka
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A task from a respectful client
 
-Currently, two official plugins are available:
+# Project Overview:
+* I developed this single landing page with vanilla JavaScript & React 19;
+* For designing I used vanilla CSS3 & Tailwind CSS;
+* For animation I used Framer Motion;
+* For deployment I take help from Vercel and Netlify.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Here is a quick reference chart detailing the core technologies and frameworks powering your landing page:
 
-## React Compiler
+| Technology / Framework | Category | Primary Purpose in Your Project |
+| :--- | :--- | :--- |
+| **React 19** | Core UI Engine | Component architecture, state management, and application structure |
+| **Vite** | Build Tool & Server | High-speed local development server and optimized production bundler |
+| **Tailwind CSS v4** | Styling Framework | Complete visual design, global layouts, and responsive breakpoints |
+| **Framer Motion** | Animation Library | Scroll-triggered reveals, interactive physics algorithms, and UI transitions |
+| **Lucide React** | Iconography | Clean, scalable vector SVG icons for UI elements and feature lists |
+| **DaisyUI** | UI Component Plugin | Supplemental Tailwind utility classes for foundational structural elements |
+| **Vercel** | Deployment (Ready) | Platform configured to host the live, globally distributed production site |
+| **ESLint** | Code Quality | Ensuring your Javascript handles variables safely without runtime errors |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*Note:* I honestly state that, for responsiveness, animations and critical designs I used Gemini & Claude AI.
 
-## Expanding the ESLint configuration
+_I tried my best to make it perfect, though it's not 100% match as mentioned to make. But there will be a satiscfaction is happening at least I tried_
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Live Links:
+* https://project-floka.vercel.app/
+* https://graceful-blini-d82e15.netlify.app/ (alternative)
