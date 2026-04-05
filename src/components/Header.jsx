@@ -24,10 +24,47 @@ export default function Header() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-3xl font-bold tracking-tighter cursor-pointer relative z-[60]"
+          className="text-3xl font-bold tracking-tighter cursor-pointer flex items-center gap-3 relative z-[60]"
           onClick={(e) => handleScroll(e, 'home')}
         >
-          FLOKA.
+          <motion.svg 
+            width="38" height="38" viewBox="0 0 40 40" fill="none"
+            className="text-current flex-shrink-0"
+            initial="rest"
+            whileHover="hover"
+            animate="rest"
+          >
+            {/* Dynamic Box */}
+            <motion.rect 
+              x="2" y="2" width="36" height="36" rx="8" stroke="currentColor" strokeWidth="2.5"
+              variants={{
+                rest: { rotate: 0, scale: 1 },
+                hover: { rotate: 45, scale: 1.1, stroke: "#E3FF04", rx: 18 }
+              }}
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+            />
+            {/* Vertical Stem */}
+            <motion.path d="M15 12V28" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round"
+              variants={{ hover: { stroke: "#E3FF04" } }}
+            />
+            {/* Top horizontal Bar */}
+            <motion.path d="M15 13H26" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round"
+              variants={{
+                rest: { x: 0 },
+                hover: { x: 6, stroke: "#E3FF04" }
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 10 }}
+            />
+            {/* Middle horizontal bar */}
+            <motion.path d="M15 21H22" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round"
+              variants={{
+                rest: { x: 0 },
+                hover: { x: 10, stroke: "#E3FF04" }
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 10, delay: 0.05 }}
+            />
+          </motion.svg>
+          <span className="hidden sm:block">FLOKA.</span>
         </motion.div>
         
         <motion.div 
